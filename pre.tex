@@ -79,6 +79,60 @@
 
     \section{调节与控制}
 
+    \begin{frame}{浅谈调节}
+        \begin{itemize}
+                \item 调节作用堵塞了干扰源传向基本变量的变异度
+                \item 例:恒温淋浴设备
+               \begin{figure}[H]
+                \centering
+                \includegraphics[width=.6\textwidth]{figures/pic1.png}
+                \end{figure}
+        \end{itemize}
+        
+    \end{frame}
+    \begin{frame}{必须变异度}
+        \begin{itemize}
+              \item D和R进行游戏, R在D之后做动作
+              \begin{figure}[H]
+                \centering
+                \includegraphics[width=.4\textwidth]{figures/pic2.png}
+                \end{figure}
+                \item 结局的变异度不能小于$\frac{D\text{的变异度}}{R\text{的变异度}}=\frac{9}{3}$
+                \item 只有变异度才能消灭变异度!
+        \end{itemize}
+    \end{frame}
+    \begin{frame}{必须变异度率}
+        \begin{itemize}
+                \item 若调节器R已给定, 则结局E的熵不小于干扰D的熵
+                \item $H_R(E)\geq H_R(D)$
+                \item 其他附加条件(如噪声、复合干扰、调节的误差等)都可以视作R的一部分
+        \end{itemize}
+    \end{frame}
+    \begin{frame}{马尔可夫型机器}
+        \begin{itemize}
+                \item 非确定性机器: 更加曲折但更加鲁棒地趋向平衡状态
+                \begin{figure}[H]
+                \centering
+                \includegraphics[width=.6\textwidth]{figures/pic3.png}
+                \end{figure}
+                \item 例: 捕蝇纸对于房间中苍蝇的作用
+        \end{itemize}
+        
+    \end{frame}
+      
+    \begin{frame}{其他调节}
+        \begin{itemize}
+                \item 特大系统: 系统T相对于调节器R来说很大, 怎么办 ?
+                \item[1] 约束
+                \begin{figure}[H]
+                \centering
+                \includegraphics[width=.6\textwidth]{figures/pic4.png}
+                \end{figure}
+                \item[2] 关注重复干扰的总结果
+                \item[3] 功率放大器
+        \end{itemize}
+    \end{frame}
+
     \section{从控制论到计算机}
 
     \section*{致谢}
@@ -89,7 +143,7 @@
             \begin{column}{.5\linewidth}
                 我们的团队（排名不分先后）：
 
-                王泽洲\quad 金皓宇\quad 陈齐治
+                王泽州\quad 金皓宇\quad 陈齐治
         
                 陈思元\quad 李鸿泽\quad 赵晨琪
                 
@@ -102,7 +156,7 @@
                 祝大家期中顺利，谢谢聆听！
             \end{column}
             \begin{column}{.5\linewidth}
-                \includegraphics[width=.4\paperwidth]{figures/misaka558.jpg}
+                \includegraphics[width=.4\paperwidth]{figures/misaka558.png}
             \end{column}
         \end{columns}
         *\footnote{组长邮箱：shizhuming@pku.edu.cn \\ LaTeX代码开源在https://github.com/ShiZhuming/pku-cybernetics}
