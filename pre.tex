@@ -5,14 +5,14 @@
 \usepackage[english]{babel}
 
 \usetheme{metropolis}
-\metroset{block=fill}
+% \metroset{block=fill}
 \usepackage{fontspec}% 控制字体
 \setmainfont{Times New Roman}% 英文字体
 \newfontfamily\arial{Arial}% Arial字体
 
 \usepackage{xeCJK} % 中文支持
 \setCJKmainfont{SimSun} % 中文字体
-\setCJKsansfont{SimHei}
+% \setCJKsansfont{SimHei}
 \XeTeXlinebreaklocale "zh"%中文自动换行
 \XeTeXlinebreakskip = 0pt plus 1pt%中文自动换行
 
@@ -32,7 +32,7 @@
 \usepackage{listings}
 \usepackage{color}
 
-\useoutertheme{infolines}
+% \useoutertheme{infolines}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -79,6 +79,149 @@
     \frame{\frametitle{Outline}\tableofcontents[hideallsubsections]}
     
     \section{机构与变异度}
+    	\begin{frame}{控制论}
+    		\begin{itemize}
+    			\item 控制论的背景：起源于二战时期对飞机的防御和打击
+    			\item 控制论的诞生：1948 年，维纳的《控制论：或关于在动物和机器中控制和通信的科学》出版，标志着这个跨学科方向正式诞生。
+            \end{itemize}
+            \begin{figure}
+                \centering
+                \includegraphics[width=.3\paperwidth]{figures/figure1_1.jpg}
+            \end{figure}
+    	    
+    		\end{frame}
+    	\begin{frame}
+    		1956 年，阿什比出版《控制论导论》，对控制论这个学科进行了更具一般性的总结和发展，明确提出控制论“本质上是关于机器的功能和行为”，“控制论将‘所有可能的机器’视为自己的研究题材”，正如几何学将所有可能的形状作为研究题材，而不是特定的圆球或方块。
+    		
+    		
+    		我们的小组展示，通过这本《控制论导论》，对控制论进行一次管中窥豹。
+    		
+    	\end{frame}
+    	
+    	\begin{frame}{前言}
+    		什么是控制论？
+    		
+    		维纳：（关于）动物和机器中控制和通信的科学
+    		
+    		Or: 它是研究这样一类系统的科学，在这类系统中能量无关紧要，而信息及控制却非常重要。
+    		
+    		\end{frame}
+    	\begin{frame}{控制论的用处}
+    		\begin{itemize}
+    			\item 一套统一的词汇和概念
+    			
+    			\item 对复杂的系统，控制论给出统一研究方法
+    
+    		\end{itemize}
+    	\end{frame}
+    	\begin{frame}{基本定义}
+	    		% \begin{block}
+    			“我们认为某一事物所具有的种种性质，归根到底无非是给它的行为起些名字”-Horrick
+    		    % \end{block}
+    	
+    		\begin{itemize}
+    			\item 差异
+    			\item 变换
+    			\item 封闭性
+    			\item 单值的
+    			\item 一一对应
+    			\item 多一变换
+    		\end{itemize}
+    	\end{frame}
+    	\begin{frame}{变换的表示}
+    		$T(n)$表示一个变换
+    		
+    		研究一个原象在多次重复变换下的结果，用有向图的形式表示。
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.6\textwidth]{figures/figure1_2.jpg}
+            \end{figure}
+    		\end{frame}
+    	\begin{frame}{确定性机器}
+    		把行为与封闭单值变换相同的机器定义为确定性机器
+    		
+    		我们不关心算子具体是什么，而只关心确定的变换，它只与变化的事实有关，而不涉及那些带有假设性的原因
+    		
+    		机器与动态图所表示的变换完全对应时，则称变换是机器的标准表达式，机器是变换的具体化
+    		
+    		任何现实的确定性机器或能动系统都对应一个封闭的单值变换
+    	\end{frame}
+    	\begin{frame}{有输入的机器}
+    		对于同一种机器，从一种状态变到另一种状态的是机器的性能，而从一种变换到另一种变换的变化是性能的变化，这取决于输入的参数。这种机器称为有输入的机器或\textbf{变换器}。
+    		\end{frame}
+    	\begin{frame}{耦合与反馈}
+    		\begin{block}{耦合}
+    			将机器结合到一起，使每台机器对其他机器的影响只限于改变后者的输入，而不改变其性能（即变换）
+    			\end{block}
+    		将P与Q耦合，使P对Q有影响而Q对P无影响，称为P主制Q
+    		
+    		当P与Q相互影响时，称该系统有反馈
+    		
+    		\end{frame}
+    	\begin{frame}{稳定性}
+    		不变量：平衡点（不动点），循环圈，稳定域
+    		\begin{figure}
+                \subfigure[]{
+                    \includegraphics[height=.33\paperheight]{figures/figure1_3.jpg}
+                }
+                \subfigure[]{
+                    \includegraphics[height=.33\paperheight]{figures/figure1_4.jpg}
+                }
+            \end{figure}
+    		干扰，稳定平衡，不稳定平衡，随遇平衡
+    		\end{frame}
+    	\begin{frame}{特大系统与黑箱}
+    		特大系统的概念
+    		黑箱的概念
+    		研究黑箱的方法：对黑箱进行不同的输入，记录黑箱的输出，变成一串含两个分量（输入、输出）的矢量表，称为登记表。
+    	\end{frame}
+    	\begin{frame}{同构与同态}
+    		两个机器的标准表达式，如果存在一一变换，能将一个机器的状态（输入与输出）变为另一机器的状态，同时把一种表示式变为另一种表示式的，称两个机器同构。
+    		
+    		
+    		\textbf{同态}：对于两个机器，存在多一变换，使得一个机器经过变换后与另一机器同构，则称较简单的那个机器是前者的同态象。
+    		
+    		\end{frame}
+		\begin{frame}{变异度}
+			\begin{itemize}
+				\item 衡量机器可能状态的参数，常用对数表示；
+				\item 状态是多种多样的，状态空间与基本事件空间类似；
+				\item 矢量状态的变异度不会大于其每个分量的变异度之和; 对于单值变换的机器，变异度不会增加。
+			\end{itemize}
+		\end{frame}
+		\begin{frame}{机器与变异度的传输}
+			\quad 机器是信息传输的载体，信息传输伴随着变异度的改变。例如，对下图的机器：
+			\begin{figure}
+                \centering
+                \includegraphics[width=.4\textwidth]{figures/figure2_1.PNG}
+            \end{figure}
+			\quad 初始状态为A， 对QR编码得到CB, 对CB译码得到QR；但对BC就不能译码
+		\end{frame}
+		\begin{frame}{多值变换下的变异度}
+			\quad 推广单值变换的属性，使机器能从一个状态按照不同概率转移到其它状态, 变异度定义为事件的信息熵。
+			
+			\quad $\text{变异度} := - \sum_i p_i \log p_i$
+			
+			\quad 可以看到，之前的变异度是在每个状态等可能出现时的特殊情况。
+			
+			\quad $I_0 := - \sum_{i = 1}^n \frac{1}{n}\log\frac{1}{n} = \log n$
+			
+		\end{frame}
+		\begin{frame}{例：马尔可夫链}
+			\begin{block}{马尔可夫链}
+				指一类事件，当前时刻要发生的事件只依赖于当前状态。
+			\end{block}
+			
+			\quad 马氏链中，变异度定义为以信息熵按照稳定状态时各个状态的概率加权平均
+            \begin{figure}
+                \centering
+                \includegraphics[width =.4\textwidth]{figures/figure2_2.PNG}
+            \end{figure}
+			$I = 0.811 * 0.449 + 1.061 * 0.429 + 1.061 * 0.122 = 0.842bit$
+			
+		 	\quad 以变异度为媒介，不同事物的不稳定程度可以相互比较
+			
+		\end{frame}
 
     \section{调节与控制}
 
